@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Jared Smith" />
+
+
+<title>Plotly Presentation</title>
+
+<script src="Plotly-Presentation_files/header-attrs-2.29/header-attrs.js"></script>
+<script src="Plotly-Presentation_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="Plotly-Presentation_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="Plotly-Presentation_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="Plotly-Presentation_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="Plotly-Presentation_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="Plotly-Presentation_files/navigation-1.1/tabsets.js"></script>
+<link href="Plotly-Presentation_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="Plotly-Presentation_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="Plotly-Presentation_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="Plotly-Presentation_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="Plotly-Presentation_files/plotly-binding-4.11.0/plotly.js"></script>
+<script src="Plotly-Presentation_files/typedarray-0.1/typedarray.min.js"></script>
+<link href="Plotly-Presentation_files/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="Plotly-Presentation_files/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="Plotly-Presentation_files/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="Plotly-Presentation_files/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Plotly Presentation</h1>
+<h4 class="author">Jared Smith</h4>
+<h4 class="date">9/23/2025</h4>
+
+</div>
+
+
+<div id="here-is-a-cool-3d-scatterplot-using-mtcars."
+class="section level2">
+<h2>Here is a cool 3D scatterplot using mtcars.</h2>
+<p>It shows the relationship between horsepower, weight, and miles per
+gallon in the mtcars dataset. Cylinder count is represented by color and
+displacement by size.</p>
+<pre class="r"><code># 3D Scatter plot of mtcars
+p &lt;- plot_ly(
+  data = mtcars,
+  x = ~hp,   # Horsepower
+  y = ~wt,   # Weight (1000 lbs)
+  z = ~mpg,  # Miles per gallon
+  color = ~factor(cyl), # Cylinder count
+  size = ~disp,         # Displacement for marker size
+  colors = c(&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;),
+  type = &#39;scatter3d&#39;,
+  mode = &#39;markers&#39;,
+  marker = list(symbol=&#39;circle&#39;, sizemode=&#39;diameter&#39;, opacity=0.8)
+) %&gt;%
+  layout(
+    scene = list(
+      xaxis=list(title=&quot;Horsepower (hp)&quot;),
+      yaxis=list(title=&quot;Weight (1000 lbs)&quot;),
+      zaxis=list(title=&quot;Miles per Gallon (mpg)&quot;)
+    ),
+    title=&quot;3D Scatter Plot of mtcars&quot;
+  )
+
+p  # render plot</code></pre>
+<pre><code>## Warning: `line.width` does not currently support multiple values.
+## Warning: `line.width` does not currently support multiple values.
+## Warning: `line.width` does not currently support multiple values.</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2ea7a635cfe2c0300dfd" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-2ea7a635cfe2c0300dfd">{"x":{"visdat":{"4881a224f80":["function () ","plotlyVisDat"]},"cur_data":"4881a224f80","attrs":{"4881a224f80":{"x":{},"y":{},"z":{},"mode":"markers","marker":{"symbol":"circle","sizemode":"diameter","opacity":0.80000000000000004},"color":{},"size":{},"colors":["red","green","blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"Horsepower (hp)"},"yaxis":{"title":"Weight (1000 lbs)"},"zaxis":{"title":"Miles per Gallon (mpg)"}},"title":"3D Scatter Plot of mtcars","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[93,62,95,66,52,65,97,66,91,113,109],"y":[2.3199999999999998,3.1899999999999999,3.1499999999999999,2.2000000000000002,1.615,1.835,2.4649999999999999,1.9350000000000001,2.1400000000000001,1.5129999999999999,2.7799999999999998],"z":[22.800000000000001,24.399999999999999,22.800000000000001,32.399999999999999,30.399999999999999,33.899999999999999,21.5,27.300000000000001,26,30.399999999999999,21.399999999999999],"mode":"markers","marker":{"color":"rgba(255,0,0,1)","size":[18.283861312047893,26.971813419805436,25.6472935894238,11.706161137440761,11.032676477924671,10,21.000249438762786,11.773509603392368,21.045148416063856,15.387877276128711,21.202294836617611],"sizemode":"diameter","symbol":"circle","opacity":0.80000000000000004,"line":{"color":"rgba(255,0,0,1)"}},"type":"scatter3d","name":"4","textfont":{"color":"rgba(255,0,0,1)","size":[18.283861312047893,26.971813419805436,25.6472935894238,11.706161137440761,11.032676477924671,10,21.000249438762786,11.773509603392368,21.045148416063856,15.387877276128711,21.202294836617611]},"error_y":{"color":"rgba(255,0,0,1)","width":[]},"error_x":{"color":"rgba(255,0,0,1)","width":[]},"line":{"color":"rgba(255,0,0,1)"},"frame":null},{"x":[110,110,110,105,123,123,175],"y":[2.6200000000000001,2.875,3.2149999999999999,3.46,3.4399999999999999,3.4399999999999999,2.77],"z":[21,21,21.399999999999999,18.100000000000001,19.199999999999999,17.800000000000001,19.699999999999999],"mode":"markers","marker":{"color":"rgba(0,255,0,1)","size":[29.957595410326768,29.957595410326768,51.958094287852333,44.54976303317536,31.663756547767527,31.663756547767527,26.590172112746323],"sizemode":"diameter","symbol":"circle","opacity":0.80000000000000004,"line":{"color":"rgba(0,255,0,1)"}},"type":"scatter3d","name":"6","textfont":{"color":"rgba(0,255,0,1)","size":[29.957595410326768,29.957595410326768,51.958094287852333,44.54976303317536,31.663756547767527,31.663756547767527,26.590172112746323]},"error_y":{"color":"rgba(0,255,0,1)","width":[]},"error_x":{"color":"rgba(0,255,0,1)","width":[]},"line":{"color":"rgba(0,255,0,1)"},"frame":null},{"x":[175,245,180,180,180,205,215,230,150,150,245,175,264,335],"y":[3.4399999999999999,3.5699999999999998,4.0700000000000003,3.73,3.7799999999999998,5.25,5.4240000000000004,5.3449999999999998,3.52,3.4350000000000001,3.8399999999999999,3.8450000000000002,3.1699999999999999,3.5699999999999998],"z":[18.699999999999999,14.300000000000001,16.399999999999999,17.300000000000001,15.199999999999999,10.4,10.4,14.699999999999999,15.5,15.199999999999999,13.300000000000001,19.199999999999999,15.800000000000001,15],"mode":"markers","marker":{"color":"rgba(0,0,255,1)","size":[74.856572711399352,74.856572711399352,55.954103267647795,55.954103267647795,55.954103267647795,100,97.306061361935647,92.816163631828388,65.42778747817411,62.284859067099035,72.611623846345708,83.83636817161387,72.836118732851077,61.611374407582943],"sizemode":"diameter","symbol":"circle","opacity":0.80000000000000004,"line":{"color":"rgba(0,0,255,1)"}},"type":"scatter3d","name":"8","textfont":{"color":"rgba(0,0,255,1)","size":[74.856572711399352,74.856572711399352,55.954103267647795,55.954103267647795,55.954103267647795,100,97.306061361935647,92.816163631828388,65.42778747817411,62.284859067099035,72.611623846345708,83.83636817161387,72.836118732851077,61.611374407582943]},"error_y":{"color":"rgba(0,0,255,1)","width":[]},"error_x":{"color":"rgba(0,0,255,1)","width":[]},"line":{"color":"rgba(0,0,255,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
